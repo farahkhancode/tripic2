@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ <% include ./partials/head.ejs %>
+  </head>
+  <body>
+
+   <% include ./partials/navbar.ejs %>
+
+      <!-- Page Content -->
+      <main class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+          <h1 class="display-3">Welcome to Tripic</h1>
+          <p class="lead">An application for users easily to find photographers at their travel destination.</p>
+           <a href="/users/signup" class="btn btn-primary btn-lg">Sign up</a>
+        </header>
+
+        <!-- Page Features -->
+        <section class="row text-center">
+
+          <section class="col-lg-4">
+            <h4 class="card-title">Destination</h4>
+            <p class="card-text">Search for photographers at your travel destination.</p>
+          </section>
+
+          <section class="col-lg-4">
+            <h4 class="card-title">Memories</h4>
+            <p class="card-text">Have someone capture your priceless memories!</p>
+          </section>
+
+          <section class="col-lg-4">
+            <h4 class="card-title">Make money!</h4>
+            <p class="card-text">Have an eye for photopgraphy? Become a travel photographer in your city!</p>
+          </section>
+
+        </section>
+        <!-- /.row -->
+
+      </main>
+      <!-- /.container -->
+
+    <% include ./partials/baseScripts.ejs %>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+
+   <% include ../static/partials/navbar.ejs %>
+
+      <!-- Page Content -->
+      <main class="container">
+
+     <% include ../static/partials/messages.ejs %>
+
+            <h1>Sign up</h1>
+
+            <form action="/users" method="post">
+
+              <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="firstname" class="form-control" name="firstname"  placeholder="Enter first name">
+              </div>
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="lastname" class="form-control" name="lastname"  placeholder="Enter last name">
+              </div>
+
+              <div class="form-group">
+               <label for="email">Email</label>
+               <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+               <small class="text-muted" id="emailHelp">email address must be a valid address</small>
+             </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" aria-describedby="passwordHelp" placeholder="Enter password">
+                <small class="text-muted" id="passwordHelp">password must match confirmation below</small>
+              </div>
+
+              <div class="form-group">
+                <label for="passwordConfirmation">Password confirmation</label>
+                <input type="password" class="form-control" name="passwordConfirmation" aria-describedby="passwordHelp" placeholder="Enter password confirmation">
+              </div>
+
+              <div class="form-group">
+                <label for="destinations">Destination</label>
+                <select name="destinations" form="destinationform">
+                 <option value="newyork">New York, USA</option>
+                 <option value="rome">Rome, Italy</option>
+                 <option value="paris">Paris, France</option>
+                 <option value="london">London, UK</option>
+               </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+      </main>
+      <!-- /.container -->
+
+    <% include ../static/partials/baseScripts.ejs %>
+    </body>
+</html>
