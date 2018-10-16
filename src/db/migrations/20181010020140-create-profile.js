@@ -25,12 +25,12 @@ module.exports = {
         type: Sequelize.INTEGER,
         onDelete: "CASCADE",
         references: {
-          model: "User",
+          model: "Users",
           key: "id",
           as: "userId",
       },
 
-      location: {
+      destination: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -41,7 +41,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    });
+    }
+  });
+
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Profiles');

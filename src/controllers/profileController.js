@@ -1,7 +1,15 @@
+const profileQueries = require("../db/queries.profiles.js");
+
+
 module.exports = {
   index(req, res, next){
-    res.send("TODO: list all profiles");
-  },
-  
+    profileQueries.getAllProfiles((err, profiles) => {
+       if(err){
+         res.redirect(500, "static/index");
+       } else {
+         res.render("profiles/index", {profiles});
+       }
+     })
+  }
 
 }

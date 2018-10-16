@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <main class="container">
+      <% include ../static/partials/navbar.ejs %>
+
+      <h1>Photographers at your destination</h1>
+
+      <ul class="list-group">
+<!-- #1 -->
+        <% profiles.forEach((profile) => { %>
+<!-- #2 -->
+          <li class="list-group-item">
+            <a href="/profiles/<%= profile.id %>"> <%= profile.title %> </a>
+          </li>
+        <% }) %>
+      </ul>
+
+    </main>
+  </body>
+</html>

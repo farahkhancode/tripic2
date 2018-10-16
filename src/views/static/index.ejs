@@ -13,8 +13,23 @@
         <!-- Jumbotron Header -->
         <header class="jumbotron my-4">
           <h1 class="display-3">Welcome to Tripic</h1>
-          <p class="lead">An application for users easily to find photographers at their travel destination.</p>
-           <a href="/users/signup" class="btn btn-primary btn-lg">Sign up</a>
+          <p class="lead">Find a photographer at your travel destination by picking a location!</p>
+
+          <form action="/destination/profiles" method="get">
+            <div class="form-group">
+              <label for="destinations">Destination</label>
+              <select name="destinations" form="destinationform">
+               <option value="newyork">New York, USA</option>
+               <option value="rome">Rome, Italy</option>
+               <option value="paris">Paris, France</option>
+               <option value="london">London, UK</option>
+             </select>
+            </div>
+            <button type="submit" class="btn btn-primary">View photographer profiles</button>
+          </form>
+      
+          <p class="lead">Have an eye for photography? Sign up and offer your services!</p>
+          <a href="/users/signup" class="btn btn-primary btn-lg">Sign up</a>
         </header>
 
         <!-- Page Features -->

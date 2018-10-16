@@ -3,6 +3,7 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 const validation = require("./validation");
 
+
 router.get("/users/signup", userController.signUp);
 router.post("/users", validation.validateUsers, userController.create);
 router.get("/users/signin", userController.signInForm);
