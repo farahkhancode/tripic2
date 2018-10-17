@@ -14,10 +14,6 @@ module.exports = (sequelize, DataTypes) => {
    }
   }, {});
   User.associate = function(models) {
-    User.hasOne(models.Profile, {
-       foreignKey: "userId",
-       as: "profile"
-     });
 
     // associations can be defined here
   };
