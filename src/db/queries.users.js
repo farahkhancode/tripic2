@@ -20,6 +20,18 @@ module.exports = {
     .catch((err) => {
       callback(err);
     })
-  }
+  },
+
+  getAllUsers(callback){
+   return User.all()
+
+//#2
+   .then((users) => {
+     callback(null, users);
+   })
+   .catch((err) => {
+     callback(err);
+   })
+ }
 
 }

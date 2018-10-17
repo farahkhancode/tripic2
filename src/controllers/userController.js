@@ -27,6 +27,18 @@ module.exports = {
      res.redirect("/");
    },
 
+   index(req, res, next){
+     userQueries.getAllUsers((err, users) => {
+
+ //#3
+         if(err){
+           res.redirect(500, "static/index");
+         } else {
+           res.render("users/index", {users});
+         }
+       })
+  },
+
   create(req, res, next){
 //#1
      let newUser = {

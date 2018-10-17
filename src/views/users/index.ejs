@@ -7,15 +7,16 @@
     <main class="container">
       <% include ../static/partials/navbar.ejs %>
 
-      <h1>Photographers at your destination</h1>
+      <h1>Photographer profiles</h1>
 
       <ul class="list-group">
 <!-- #1 -->
-        <% profiles.forEach((profile) => { %>
+        <% users.forEach((user) => { %>
 <!-- #2 -->
           <li class="list-group-item">
-            <a href="/profiles/<%= profile.id %>"> <%= profile.title %> </a>
+            <a href="/users/<%= user.id %>"> <%= user.email %> </a>
           </li>
+        
         <% }) %>
       </ul>
 
